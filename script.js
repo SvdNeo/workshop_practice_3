@@ -1,5 +1,5 @@
 const data = [
-  { "Header 1": "Head", "Header 2": "Request Id", "Header 3": "Request Date", "Header 4": "Request Amount", "Header 5": "Status" },
+  
   { "Header 1": "Exxon Mobil", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Processed" },
   { "Header 1": "Berkshire Hathway", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Cancelled" },
   { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Failed" },
@@ -21,7 +21,7 @@ function showPage(pageNumber) {
   const start = (pageNumber - 1) * rowsPerPage;
   const end = start + rowsPerPage;
 
-  const tableContainer = document.getElementById('table-container');
+  const tableContainer = document.getElementById('myTable');
   const paginationContainer = document.getElementById('pagination');
 
   // Create the table
