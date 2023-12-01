@@ -1,71 +1,28 @@
-const data = [
-  
-  { "Header 1": "Exxon Mobil", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Processed" },
-  { "Header 1": "Berkshire Hathway", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Cancelled" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Failed" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Failed" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Pending" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Cancelled" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Processed" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Pending" },
-  { "Header 1": "Alphabet", "Header 2": "Exxon Mobil", "Header 3": "Exxon Mobil", "Header 4": "$10,000,000", "Header 5": "Pending" }
-];
-// Number of rows per page
-const rowsPerPage = 9;
+// function open(){
+//   document.getElementById("toggleButton").style.width = "300px"
+// }
+// function close(){
+//   document.getElementById("toggleButton").style.width = "160px"
+// }
 
-// Calculate the total number of pages
-const totalPages = Math.ceil(data.length / rowsPerPage);
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const main = document.getElementById('main');
+  const button = document.getElementById('sidebarCollapse');
+  const sidebarImage = document.getElementById('sidebarImage');
 
-// Function to display a specific page
-function showPage(pageNumber) {
-  const start = (pageNumber - 1) * rowsPerPage;
-  const end = start + rowsPerPage;
-
-  const tableContainer = document.getElementById('myTable');
-  const paginationContainer = document.getElementById('pagination');
-
-  // Create the table
-  const table = document.createElement('table');
-  table.className = 'w-full border-collapse';
-  for (let i = start; i < end && i < data.length; i++) {
-    const row = table.insertRow();
-    row.className = 'border-b';
-    for (let key in data[i]) {
-      const cell = row.insertCell();
-      cell.className = 'p-2';
-      cell.textContent = data[i][key];
-    }
+  if (main.classList.contains('shifted')) {
+    sidebar.style.width = '160px';
+    main.classList.remove('shifted');
+    button.textContent = '>';
+    sidebarImage.src ="/assets/Group 1.svg";
+  } else {
+    sidebar.style.width = '300px';
+    main.classList.add('shifted');
+    button.textContent = '<';
+    sidebarImage.src = './assets/aftermain_logo.svg';
   }
-  tableContainer.innerHTML = '';
-  tableContainer.appendChild(table);
-
-  // Create pagination buttons
-  const buttons = [];
-  for (let i = 1; i <= totalPages; i++) {
-    const button = document.createElement('a');
-    button.href = '#';
-    button.className = `mx-1 px-4 py-2 rounded cursor-pointer ${i === pageNumber ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-500'}`;
-    button.textContent = i;
-    button.addEventListener('click', () => showPage(i));
-    buttons.push(button);
-  }
-
-  // Display pagination buttons
-  paginationContainer.innerHTML = '';
-  const prevButton = document.createElement('a');
-  prevButton.href = '#';
-  prevButton.textContent = '«';
-  prevButton.addEventListener('click', () => showPage(pageNumber - 1));
-  paginationContainer.appendChild(prevButton);
-
-  buttons.forEach(button => paginationContainer.appendChild(button));
-
-  const nextButton = document.createElement('a');
-  nextButton.href = '#';
-  nextButton.textContent = '»';
-  nextButton.addEventListener('click', () => showPage(pageNumber + 1));
-  paginationContainer.appendChild(nextButton);
 }
 
-// Show the first page by default
-showPage(1);
+
+  
