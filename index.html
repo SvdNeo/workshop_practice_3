@@ -11,18 +11,21 @@
     <div
       id="container" class="bg-gradient-to-br from-gray-900 via-gray-700 to-gray-900 h-screen flex justify-between"
     >
-      <aside id="sidebar" class="h-screen flex flex-col ml-10 pt-6 w-[160px]">
-        <button id="sidebarCollapse" onclick="toggleSidebar()" ></button>
+      <aside id="sidebar" class="h-screen flex flex-col ml-10 pt-6 w-[160px] relative">
+        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute " style="top:48px;left:155px;" ></button>
 
         <img src="/assets/Group 1.svg" id="sidebarImage" class="w-[78px] h-9 flex-shrink-0"  alt="" />
 
         <div class="mt-[72px] ml-7">
-          <div  class="flex">
-            
+          <div  class="flex ">
+            <div class="w-1 h-6 bg-green-500 left-0"></div>
             <img src="/assets/Frame 675.svg" class="w-6 h-6 mb-4" alt="" />
-            <span id="tab_one_name" class="">Accounts </span>
+            <span id="tab_one_name" class=" text-white text-lg font-medium">Accounts Receivable</span>
           </div>
+          <div class="flex">
           <img src="/assets/dollar 1.svg" class="w-6 h-6" alt=" " />
+          <span id="tab_two_name" class=" text-[#828282] text-lg font-medium">Payments</span>
+        </div>
         </div>
       </aside>
       <main id="main" class="w-[1700px] custom-bg rounded-3xl m-4 flex-grow">
