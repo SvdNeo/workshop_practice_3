@@ -48,12 +48,13 @@
       const sidebarImage = document.getElementById('sidebarImage');
       const icon1  = document.getElementById("tab_one_name");
       const icon2 = document.getElementById("tab_two_name");
+      const greenDiv = document.querySelector('.green-div');
 
       // Check if it's the initial setup
       if (initialSetup) {
         sidebar.style.width = '160px';
         main.classList.remove('shifted');
-        button.textContent = '>';
+        button.innerHTML= '<img src="/assets/bxs-chevron-left.svg" alt="Right Arrow" class = "ml-3 rotate-right">';
         sidebarImage.style.width = "78px";
         sidebarImage.style.height = "36px";
         icon1.style.display = "none";
@@ -61,6 +62,7 @@
         sidebarCollapse.style.left = '155px';
         sidebarCollapse.style.top = '48px';
         sidebarImage.src = "/assets/Group 1.svg";
+        greenDiv.style.display = 'none'
         return;
       }
 
@@ -68,7 +70,7 @@
       if (main.classList.contains('shifted')) {
         sidebar.style.width = '160px';
         main.classList.remove('shifted');
-        button.textContent = '>';
+        button.innerHTML= '<img src="/assets/bxs-chevron-left.svg" alt="Right Arrow" class = "ml-3 rotate-right">';
         sidebarImage.style.width = "78px";
         sidebarImage.style.height = "36px";
         icon1.style.display = "none";
@@ -76,6 +78,7 @@
         sidebarCollapse.style.left = '155px';
         sidebarCollapse.style.top = '48px';
         sidebarImage.src = "/assets/Group 1.svg";
+        greenDiv.style.display = 'none';
       } else {
         sidebar.style.width = '300px';
         main.classList.add('shifted');
@@ -85,8 +88,9 @@
         icon1.style.display = "";
         sidebarCollapse.style.left = '270px';
         sidebarCollapse.style.top = '48px';
-        button.textContent = '<';
+        button.innerHTML= '<img src="/assets/bxs-chevron-left.svg" alt="Right Arrow" class = "ml-3 rotate-left">';
         sidebarImage.src = './assets/aftermain_logo.svg';
+        greenDiv.style.display = 'block';
       }
     }
 
