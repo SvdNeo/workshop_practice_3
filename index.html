@@ -116,7 +116,7 @@
           </div>
         </div>
 
-        <div class=" bg-white rounded-lg mx-7 mt-5 h-full ">
+        <div class=" bg-white rounded-lg mx-7 mt-5  ">
           <div class="flex justify-between">
             <div class="text-center mb-1 relative ml-6 mt-5">
               <div class="flex justify-start items-center p-2 gap-2 flex-shrink-0 w-[300px]">
@@ -412,15 +412,26 @@
            
             
           </div>
-          <div class="flex justify-center mt-auto " id="pagination">
-            <a href="#">&laquo;</a>
+          <div class=" flex justify-around mt-auto " id="pagination">
+            <div></div>
+            <div class="">
+            <a href="#" class="prev"><</a>
+
             <a class="active" href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#">&raquo;</a>
+            <a href="#">...</a>
+           
+            <a href="#">10</a>
+            <a href="#" class="next text-semibold">></a>
+          </div>
+          <div class="flex items-center space-x-2 justify-end">
+            <label for="pageInput" class="text-sm">Go To Page</label>
+            <input type="text" id="pageInput" class="w-9 h-6 border border-gray-300 rounded px-2">
+            <div class="text-lg cursor-pointer" id="goToPage">></div>
+          </div>
+          
+          
           </div>
           <script src="script.js"></script>
         </div>

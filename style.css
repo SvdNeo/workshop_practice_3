@@ -1,21 +1,19 @@
 #pagination a {
-    color: black;
-    float: left;
-    padding: 8px 16px;
-    text-decoration: none;
-    transition: background-color .3s;
-  }
-  
-  #pagination a.active {
-    background-color: dodgerblue;
-    color: white;
-  }
-  
-  #pagination a:hover:not(.active) {background-color: #ddd;}
-
-  .bg-gradient-to-r {
-    background: linear-gradient(to right, var(--tw-gradient-stops));
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: font-weight .3s;
 }
+
+#pagination a.active {
+  font-weight: bold;
+}
+
+#pagination a.next {
+  font-weight: bold; 
+}
+
 .custom-bg {
   background: rgba(255, 255, 255, 0.96);
 }
