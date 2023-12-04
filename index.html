@@ -12,19 +12,22 @@
     <div
       id="container" class="bg-gradient-to-r from-[#101010] via-[#101010] to-[#333D33] h-screen flex justify-between"
     >
-      <aside id="sidebar" class="h-screen flex flex-col ml-10 pt-6 w-[160px] relative">
-        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute" style="top:48px;left:155px; "  > </button>
+      <aside id="sidebar" class="h-screen flex flex-col items-center  pt-6 w-[175px] relative">
+        <button id="sidebarCollapse" onclick="toggleSidebar()" class="absolute" style="top:48px;left:175px; "  > </button>
 
         <img src="/assets/Group 1.svg" id="sidebarImage" class="w-[78px] h-9 flex-shrink-0"  alt="" />
 
-        <div class="mt-[72px] ml-7">
-          <div  class="flex ">
-            <div class="w-1 h-6 bg-green-500 !ml-0 green-div"></div>
-            <img src="/assets/Frame 675.svg" class="w-6 h-6 mb-4" alt="" />
+        <div id="icon" class="mt-[72px] w-full">
+          <div  class="flex w-full ">
+
+            <div class="w-1 h-6 bg-green-500 mr-6 green-div"></div>
+           
+            <img src="/assets/Frame 675.svg" class="w-6 h-6 mb-4 mr-3" alt="" />
             <span id="tab_one_name" class=" text-white text-lg font-medium">Accounts Receivable</span>
+         
           </div>
-          <div class="flex">
-          <img src="/assets/dollar 1.svg" class="w-6 h-6" alt=" " />
+          <div id="payment" class="flex ml-7 ">
+          <img src="/assets/dollar 1.svg" class="w-6 h-6 mr-3 " alt=" " />
           <span id="tab_two_name" class=" text-[#828282] text-lg font-medium">Payments</span>
         </div>
         </div>
@@ -52,7 +55,7 @@
         </header>
         <div class="h-[96px] bg-white rounded-lg mx-7 flex justify-around">
           <div class="flex d-flex align-items-center">
-            <div class="pt-5">
+            <div class="pt-5 pr-2">
               <img
                 src="/assets/Frame 1000001213.svg"
                 class="w-18 h-18"
@@ -62,7 +65,7 @@
             <div class="flex flex-col pt-5">
               <span
                 class="flex text-grey-1-place-holder font-inter text-base font-medium leading-6"
-                >Reuest Raised
+                >Request Raised
                 <img src="/assets/info 1.svg" class="w-4 h-4" alt=""
               /></span>
               <span
@@ -72,7 +75,7 @@
             </div>
           </div>
           <div class="flex d-flex align-items-center">
-            <div class="pt-5">
+            <div class="pt-5 pr-2">
               <img
                 src="/assets/Frame 1000001213 (1).svg"
                 class="w-18 h-18 pl-8"
@@ -92,7 +95,7 @@
             </div>
           </div>
           <div class="flex d-flex align-items-center">
-            <div class="pt-5">
+            <div class="pt-5 pr-2">
               <img
                 src="/assets/Frame 1000001213 (2).svg"
                 class="w-18 h-18 pl-8"
@@ -113,7 +116,7 @@
           </div>
         </div>
 
-        <div class=" bg-white rounded-lg mx-7 mt-5 ">
+        <div class=" bg-white rounded-lg mx-7 mt-5 h-full ">
           <div class="flex justify-between">
             <div class="text-center mb-1 relative ml-6 mt-5">
               <div class="flex justify-start items-center p-2 gap-2 flex-shrink-0 w-[300px]">
@@ -150,9 +153,9 @@
               </button>
             </div>
           </div>
-          <div class="mx-auto flex-1  bg-white p-8 rounded ">
+          <div class="mx-auto flex-1  bg-white p-8 rounded overflow-y-auto ">
             
-              <table class="table-auto w-full overflow-y-auto px-2 py-4">
+              <table class="table-auto w-full  px-2 py-4">
                 <tr
                   class="border-b border-solid bg-[#efefef80] bg-opacity-50 border-b-[#E8E8E8]  mb-8 text-left h-[50px]"
                 >
