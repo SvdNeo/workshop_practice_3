@@ -18,7 +18,7 @@ function toggleSidebar(initialSetup = false) {
     sidebarImage.style.height = "36px";
     icon1.style.display = "none";
     icon2.style.display = "none";
-    sidebarCollapse.style.left = '182px';
+    sidebarCollapse.style.left = '155px';
     sidebarCollapse.style.top = '48px';
     sidebarImage.src = "/assets/Group 1.svg";
     greenDiv.style.display = 'none'
@@ -29,14 +29,14 @@ function toggleSidebar(initialSetup = false) {
 
   // Perform the toggling actions
   if (main.classList.contains('shifted')) {
-    sidebar.style.width = '182px';
+    sidebar.style.width = '175px';
     main.classList.remove('shifted');
     button.innerHTML= '<img src="/assets/bxs-chevron-left.svg" alt="Right Arrow" class = "ml-3 rotate-right">';
     sidebarImage.style.width = "78px";
     sidebarImage.style.height = "36px";
     icon1.style.display = "none";
     icon2.style.display = "none";
-    sidebarCollapse.style.left = '182px';
+    sidebarCollapse.style.left = '155px';
     sidebarCollapse.style.top = '48px';
     sidebarImage.src = "/assets/Group 1.svg";
     greenDiv.style.display = 'none';
@@ -49,7 +49,7 @@ function toggleSidebar(initialSetup = false) {
     sidebarImage.style.height = "80px";
     icon2.style.display = "";
     icon1.style.display = "";
-    sidebarCollapse.style.left = '275px';
+    sidebarCollapse.style.left = '250px';
     sidebarCollapse.style.top = '48px';
     button.innerHTML= '<img src="/assets/bxs-chevron-left.svg" alt="Right Arrow" class = "ml-3 rotate-left">';
     sidebarImage.src = './assets/aftermain_logo.svg';
