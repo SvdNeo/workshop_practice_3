@@ -14,6 +14,23 @@
   font-weight: bold; 
 }
 
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #010101; 
+}
+
+
+
 .custom-bg {
   background: rgba(255, 255, 255, 0.96);
 }
