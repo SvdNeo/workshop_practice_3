@@ -29,7 +29,15 @@
   background: #010101; 
 }
 
-
+/* .tab_background{
+  flex: 1 1 auto;
+}
+.head{
+  flex: 0 1 auto;
+}
+.footer {
+  flex: 0 1 40px;
+} */
 
 .custom-bg {
   background: rgba(255, 255, 255, 0.96);

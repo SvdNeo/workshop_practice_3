@@ -23,7 +23,7 @@ function toggleSidebar(initialSetup = false) {
     sidebarImage.src = "/assets/Group 1.svg";
     greenDiv.style.display = 'none'
     icon.classList.remove('w-full');
-    payment.classList.remove('ml-7');
+     payment.classList.remove('ml-7');
     return;
   }
 
@@ -41,7 +41,7 @@ function toggleSidebar(initialSetup = false) {
     sidebarImage.src = "/assets/Group 1.svg";
     greenDiv.style.display = 'none';
     icon.classList.remove('w-full');
-    payment.classList.remove('ml-7');
+     payment.classList.remove('ml-7');
   } else {
     sidebar.style.width = '300px';
     main.classList.add('shifted');
@@ -55,7 +55,7 @@ function toggleSidebar(initialSetup = false) {
     sidebarImage.src = './assets/aftermain_logo.svg';
     greenDiv.style.display = 'block';
     icon.classList.add('w-full');
-    payment.classList.add('ml-7');
+     payment.classList.add('ml-7');
   }
 }
 
